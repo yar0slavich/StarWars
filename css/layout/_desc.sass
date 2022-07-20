@@ -1,0 +1,63 @@
+.desc
+    &-title
+        font-size: 40px
+        font-weight: 900
+        &__sub
+            font-size: 64px
+            line-height: 78px
+    &-txt
+        max-width: 572px
+        width: 100%
+        margin: 25px 0px
+        opacity: 0.5
+    &-premiere
+        line-height: 27px
+        color: $red
+    &-date
+        display: block
+        font-size: 34px
+        line-height: 36px
+        margin: 5px 0px 54px 0px
+    &-button
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        outline: none
+        cursor: pointer
+        border: none
+        color: $light
+        width: 260px
+        height: 64px
+        border-radius: 50px
+        font-size: 14px
+        line-height: 16px
+        background: linear-gradient(90deg, $buttonPrev 10%, $buttonNext 90%)
+        img
+            position: relative
+            z-index: 1
+            right: -18px
+            margin-left: 20px
+        &::before, &::after
+            content: ''
+            position: absolute
+            border-radius: 50%
+            transition: 0.2s
+        &::before
+            width: 80px
+            height: 80px
+            top: -8px
+            right: -8px
+            background-color: rgba($light, 0.3)
+        &::after
+            width: 64px
+            height: 64px
+            top: 0
+            right: 0
+            background-color: $light
+        &:hover
+            &::after, &::before
+                width: 70px
+                height: 70px
+                top: -3px
+                right: -3px
